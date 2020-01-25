@@ -1,38 +1,26 @@
-.App {
-  text-align: center;
+import React from "react"
+import DataFetcher from "./DataFetcher"
+
+function App() {    
+  return (
+    <div>
+      <DataFetcher url="https://swapi.co/api/people/1">
+        {/**
+         * Part 2: Call the function the DataFetcher is expecting.
+         * If should receive the data and the loading state, and return the JSX
+         * that makes use of that info. If the data is still loading, display
+         * "Loading..." in an h1 element, and once the data has loaded, just display 
+         * the data with `<p>{JSON.stringify(data)}</p>`
+         * 
+         * Remember: With the render props pattern, you can use a custom prop
+         * (typically called `render`), OR you can use `props.children`. Based
+         * on what's already written here for you, you should be able to figure
+         * out which of these we're using. (You may have to make changes to the
+         * DataFetcher component based on what you see here.)
+         */}
+      </DataFetcher>
+    </div>
+  )
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+export default App
